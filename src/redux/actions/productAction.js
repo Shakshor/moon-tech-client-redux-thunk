@@ -1,18 +1,29 @@
 import {
   ADD_PRODUCT,
   ADD_TO_CART,
+  LOAD_PRODUCT,
   PRODUCT_LOADED,
   REMOVE_FROM_CART,
   REMOVE_PRODUCT,
 } from "../actionTypes/actionTypes";
 
-export const addProduct = (product) => {
+// load product
+export const loadProduct = (data) => {
   return {
-    type: ADD_PRODUCT,
-    payload: product,
+    type: LOAD_PRODUCT,
+    payload: data,
   };
 };
 
+// add product
+export const addProduct = (data) => {
+  return {
+    type: ADD_PRODUCT,
+    payload: data,
+  };
+};
+
+// remove product
 export const removeProduct = (id) => {
   return {
     type: REMOVE_PRODUCT,
